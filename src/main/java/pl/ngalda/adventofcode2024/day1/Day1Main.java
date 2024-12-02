@@ -45,7 +45,7 @@ public class Day1Main {
         secondColumnLocations = new ArrayList<>();
         List<List<String>> records = Files.readAllLines(Paths.get(CSV_FILE))
                 .stream()
-                .map(line -> Arrays.asList(line.split("   ")))
+                .map(line -> Arrays.asList(line.split(" {3}")))
                 .collect(Collectors.toList());
         divdeIntoColumn(firstColumnLocations, records, 0);
         divdeIntoColumn(secondColumnLocations, records, 1);
